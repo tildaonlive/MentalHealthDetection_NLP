@@ -1,0 +1,6 @@
+def gambler_loss(model_output, targets, reward=5):
+  #outputs = torch.nn.functional.softmax(model_output, dim=1)
+  outputs, reservation = model_output[:,:-1], model_output[:,-1]
+  gain = torch.gather(outputs, dim=1, index=targets.unsqueeze(1)).squeeze()
+  doubling_rate = (gain+reservation/reward).log()
+  return -doubling_rate.mean()
