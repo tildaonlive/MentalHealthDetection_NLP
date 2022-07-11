@@ -1,5 +1,5 @@
 # MentalHealthDetection_NLP
-Early detection of mental health on social media
+This project aims to detect mental health on social media in an early stage
 
 The gamblers loss function respects to SASI Model human-in-the-loop perspective to predict mental health on social media
 
